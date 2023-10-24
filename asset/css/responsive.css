@@ -1,0 +1,206 @@
+/* ---------- từ mobile trở xuống --------------- */ 
+@media (max-width: 739px) {
+    .main {
+        margin-top: 112px;
+    }
+    .header__img {
+        padding: 8px 16px 8px 24px;
+        height: 44px;
+    }
+    .nav-mobile {
+        display: block;
+        padding-left: 12px;
+        position: absolute;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 87vh;
+        animation: fadeRight ease-in-out 0.3s;
+    }
+    
+    .nav-bar-icon {
+        display: block;
+        padding: 8px 16px 8px 24px;
+        font-size: 20px;
+        cursor: pointer;   
+    }
+    .nav-list {
+        display: none;
+    }
+    .nav-item {
+        border-bottom: 1px dotted #ddd;
+    }
+    .slideshow {
+        height: 83vh;
+    }
+    .nav-block {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+    div.nav-item {
+        font-size: 20px;
+    }
+    .ratiobox {
+        margin: -2px;
+    }
+    .block-ratiobox {
+        padding: unset;
+    }
+    .product-name {
+        font-size: 10px;
+    }
+    .product-prices {
+        font-size: 12px;
+        margin: 0 2px 0;
+    }
+    .product {
+        margin: 120px 24px 16px;
+    }
+    .product-item {
+        margin-bottom: 8px;
+        box-shadow: unset;
+    }
+    .product-percent-price {
+        font-size: 8px;
+    }
+    .product-cancel-price {
+        font-size: 7px;
+        padding: 5px 5px 5px 0px;
+    }
+    .btn-buy {
+        font-size: 12px;
+        width: 60%;
+        padding: 4px 8px;
+    }
+    #toast {
+        top: 32px;
+        right: 4px;
+    }
+    .toast {
+        min-width: 336px;
+    }
+    .apologize-mess {
+        padding: 12px 0 24px;
+    }
+    .other-products {
+        margin: unset;
+    }
+}
+/* từ moblie trở lên */
+@media (min-width: 740px) {
+    /* .nav-item {
+        display: none;
+    } */
+}
+/* --------------- từ tablet tới pc ------------------- */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    .main {
+        margin-top: 120px;
+    }
+    .block-ratiobox {
+        margin-top: 10px;
+    }
+    .ratiobox-img {
+        width: 95%;
+    }
+    .block-ratiobox {
+        padding: unset;
+    }
+    .nav-item:nth-child(5),
+    .nav-item:nth-child(6),
+    .nav-item:nth-child(7) {
+        display: none;
+    }
+    .nav-block {
+        width: 90%;
+        margin: 0 50px 0 38px;
+    }
+    .nav-list:nth-child(1) {
+        padding: 0 16px 0 50px;
+    }
+    
+    .slogan-ipad {
+        display: block;
+        font-size: 52px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-fill-color: hsl(0deg 0% 100%);
+        margin: unset;
+    }
+    .header {
+        background-color: #fff;
+        height: unset;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header__img {
+        margin-top: 12px;
+    }
+    .product {
+        margin: 140px 50px 34px;
+    }
+    .product-item {
+        margin-bottom: 16px;
+    }
+    .product-cancel-price {
+        padding: 5px 3px 3px 5px;
+    }
+    .product-cancel-price::before {
+        height: 2.25em;
+    }
+    .product-prices {
+        margin: 0 4px 0;
+        font-size: 14px;
+    }
+    .btn-buy {
+        font-size: 13px;
+    }
+    #toast {
+        top: 32px;
+        right: 16px;
+    }
+    .apologize-mess {
+        padding: 12px 0 28px;
+    }
+    .slideshow {
+        height: 83vh;
+    }
+    .not-updated-yet {
+        margin: 30vh auto 0;
+    }
+}
+/* từ tablet trở xuống */
+@media (max-width: 1023px) {
+    
+    .slogan-ipad {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        font-size: 26px;
+        line-height: 30px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-fill-color: hsl(0deg 0% 0%);
+        margin: unset;
+        background-color: #333;
+        color: #fff;
+    }
+    .header {
+        background-color: #fff;
+        margin-top: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+}
+/* ----------------- từ pc trở lên ----------------------- */
+@media (min-width: 1024px) {
+    .nav-item__cart {
+        margin-right: 50px;
+    }
+
+}
