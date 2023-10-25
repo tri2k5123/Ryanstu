@@ -42,7 +42,7 @@ html {
 .circle::before {
     content: "";
     display: none;
-    background: url(https://github.com/tri2k5123/Ryanstu/asset/img/circle.webp) left / cover no-repeat;
+    background: url(https://tri2k5123.github.io/Ryanstu/asset/img/circle.webp) left / cover no-repeat;
     position: absolute;
     background-size: 3.5em 2.5em;
     z-index: 4;
@@ -225,7 +225,7 @@ html {
     text-align: center;
 }
 .slideshow {
-    background: url('https://github.com/tri2k5123/Ryanstu/asset/img/slideshow_1.webp') top center / cover no-repeat;
+    background: url('https://tri2k5123.github.io/Ryanstu/asset/img/slideshow_1.webp') top center / cover no-repeat;
     padding-top: 50%;
     display: block;
     cursor: pointer;
@@ -398,7 +398,7 @@ html {
     top: 0;
     left: 0;
     z-index: 5;
-    background: url(https://github.com/tri2k5123/Ryanstu/asset/img/sale.webp) top left / cover no-repeat;
+    background: url(https://tri2k5123.github.io/Ryanstu/asset/img/sale.webp) top left / cover no-repeat;
     background-size: 3.5em 2.5em;
     width: 4.125em;
     height: 3.25em;
