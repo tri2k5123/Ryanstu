@@ -1,12 +1,9 @@
 // animation header
 window.addEventListener("scroll", function() {
-    var header = document.querySelector(".header");
+    var header = $(".header");
     header.classList.toggle("sticky", window.scrollY > 0);
 })
 // show product
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-
 const navMobiles = $$(".js-nav-mobile");
 const navHomes = $$(".js-nav-home");
 
@@ -51,78 +48,50 @@ navMobiles.forEach((navMobile, index) => {
         overlay.classList.remove("open");
     }
 })
+// hide pagination and show more product
+
 // show nav category
 const navCate = $(".js-nav-cate");
 const btnCate = $(".js-btn-cate");
 const overlay = $(".js-overlay");
 
 
-btnCate.addEventListener("click", () => overlay.classList.add("open"));
+btnCate.addEventListener("click", () => overlay.classList.toggle("open"));
 
 overlay.addEventListener("click", () => overlay.classList.remove("open"));
 navCate.addEventListener("click", (event) => event.stopPropagation());
-// Show notify update
-const btnUpdates = document.querySelectorAll(".js-notify-update");
-const notifyUpdate = document.querySelector(".js-update");
+// Show order
+const btnUpdates = $$(".js-notify-update");
+const notifyUpdate = $(".js-update");
 
 for(const btnUpdate of btnUpdates) {
     btnUpdate.addEventListener("click", () => notifyUpdate.classList.add('open'));
 }
-// Hide notify update
-const closeNotify = document.querySelector(".js-close-notify");
-const mainNotify = document.querySelector(".not-updated-yet");
+// Hide order
+const closeNotify = $(".js-close-notify");
+const mainNotify = $(".not-updated-yet");
 
 closeNotify.addEventListener("click", () => notifyUpdate.classList.remove('open'));
 notifyUpdate.addEventListener("click", () => notifyUpdate.classList.remove('open'));
 mainNotify.addEventListener("click", (event) => event.stopPropagation());
 
-// toast message
-function toast({title, message, type, duration, perform}) {
-    const main = document.getElementById('toast');
+// Default right click
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+}, false);
+// ----------------------
+// preloader main
+var preLoader = $('#preloader')
+var root = $('#root')
+setTimeout(function() {
+    preLoader.style.display = 'none'
+    root.style.display = 'block';
+}, 1000)
+// show search
+// const search = $('.js-search')
+// const iconSearch = $('.js-search-icon')
+// const deleteSearch = $('.js-search-delete')
+// const typeSearch = $('.js-search-type')
 
-    if(main) {
-        const toast = document.createElement('div');
-        toast.classList.add('toast', `toast--${type}`);
-        // auto remove
-        const autoRemove = setTimeout(function() {
-            main.removeChild(toast);
-        }, duration + perform);
-        // remove when clicked
-        toast.onclick = function(e) {
-            if(e.target.closest('.toast__close')) {
-                main.removeChild(toast);
-                clearTimeout(autoRemove);
-            }
-        }
-        const delay = (duration / 1000).toFixed(2);
-        const effect = (perform / 1000).toFixed(2);
-        toast.style.animation = `ShowInLeft ease-in-out 0.3s, fadeIn linear ${effect}s ${delay}s forwards`;
-
-        const icons = {
-            success: 'fa-solid fa-circle-check',
-            info: 'fa-solid fa-circle-info',
-            warning: 'fa-solid fa-circle-exclamation',
-            error: 'fa-solid fa-circle-exclamation',
-        }
-        const icon = icons[type];
-        toast.innerHTML = `
-            <i class="toast__icon ${icon}"></i>
-            <div class="toast__notify">
-                <div class="toast__notify__title">${title}</div>
-                <div class="toast__notify__text">${message}</div>
-            </div>
-            <i class="toast__close fa-solid fa-xmark"></i>
-        `;
-        main.appendChild(toast);
-    }
-};
-
-function showToastInfo() {
-    toast({
-        title: 'Success',
-        message: 'Please contact admin to order',
-        type: 'info',
-        duration: 4000,
-        perform: 1000,
-    })
-}
+// iconSearch.addEventListener("click", () => search.classList.toggle('active'))
+// deleteSearch.addEventListener('click', () => typeSearch.value = '')

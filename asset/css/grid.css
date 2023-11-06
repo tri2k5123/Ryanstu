@@ -115,6 +115,10 @@
     margin-left: 16.66667%;
 }
 
+.c-o-2-4 {
+    margin-left: 20%;
+}
+
 .c-o-3 {
     margin-left: 25%;
 }
@@ -248,6 +252,10 @@
 
     .m-o-2 {
         margin-left: 16.66667%;
+    }
+
+    .m-o-2-4 {
+        margin-left: 20%;
     }
 
     .m-o-3 {
@@ -401,7 +409,9 @@
     .l-o-2 {
         margin-left: 16.66667%;
     }
-
+    .l-o-2-4 {
+        margin-left: 20%;
+    }
     .l-o-3 {
         margin-left: 25%;
     }
@@ -563,6 +573,10 @@
 
     .wide .l-o-2 {
         margin-left: 16.66667%;
+    }
+
+    .wide .l-o-2-4 {
+        margin-left: 20%;
     }
 
     .wide .l-o-3 {

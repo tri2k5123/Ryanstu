@@ -1,5 +1,5 @@
 /* ---------- từ mobile trở xuống --------------- */ 
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
     .main {
         margin-top: 112px;
     }
@@ -20,7 +20,7 @@
     }
     
     .nav-bar-icon {
-        display: block;
+        display: inline-block;
         padding: 8px 16px 8px 24px;
         font-size: 20px;
         cursor: pointer;   
@@ -69,17 +69,15 @@
         font-size: 7px;
         padding: 5px 5px 5px 0px;
     }
+    .pagination-item__link {
+        padding: 4px 12px;
+        margin: 4px;
+        font-size: 1.6rem;
+    }
     .btn-buy {
         font-size: 12px;
         width: 60%;
         padding: 4px 8px;
-    }
-    #toast {
-        top: 32px;
-        right: 4px;
-    }
-    .toast {
-        min-width: 336px;
     }
     .apologize-mess {
         padding: 12px 0 24px;
@@ -87,15 +85,28 @@
     .other-products {
         margin: unset;
     }
-}
-/* từ moblie trở lên */
-@media (min-width: 740px) {
-    /* .nav-item {
-        display: none;
+    iframe {
+        width: 100% !important;
+    }
+    .not-updated-yet__main {
+        padding-top: 40px;
+    }
+    .not-updated-yet {
+        margin: unset;
+        border-radius: unset;
+        height: 100vh;
+    }
+    /* .search-mobile {
+        display: inline-flex;
+        margin-right: 24px;
     } */
 }
+/* từ moblie trở lên */
+@media (min-width: 46.25em) {
+
+}
 /* --------------- từ tablet tới pc ------------------- */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
     
     .main {
         margin-top: 120px;
@@ -119,7 +130,7 @@
         margin: 0 50px 0 38px;
     }
     .nav-list:nth-child(1) {
-        padding: 0 16px 0 50px;
+        padding: 0 0 0 50px;
     }
     
     .slogan-ipad {
@@ -157,23 +168,21 @@
     .btn-buy {
         font-size: 13px;
     }
-    #toast {
-        top: 32px;
-        right: 16px;
-    }
     .apologize-mess {
         padding: 12px 0 28px;
     }
     .slideshow {
         height: 83vh;
     }
-    .not-updated-yet {
-        margin: 30vh auto 0;
-    }
+    /* .nav-list .search {
+        display: flex;
+    } */
 }
 /* từ tablet trở xuống */
-@media (max-width: 1023px) {
-    
+@media (max-width: 63.9375em) {
+    #preloader {
+        margin-top: 50%;
+    }
     .slogan-ipad {
         position: fixed;
         z-index: 2;
@@ -196,9 +205,10 @@
         align-items: flex-start;
         height: auto;
     }
+    
 }
 /* ----------------- từ pc trở lên ----------------------- */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
     .nav-item__cart {
         margin-right: 50px;
     }
