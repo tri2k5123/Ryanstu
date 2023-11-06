@@ -205,6 +205,11 @@
         align-items: flex-start;
         height: auto;
     }
+    .btn-buy {
+        position: relative;
+        float:inline-start;
+        margin-bottom: 16px;
+    }
     
 }
 /* ----------------- từ pc trở lên ----------------------- */
@@ -212,5 +217,10 @@
     .nav-item__cart {
         margin-right: 50px;
     }
-
+    .product-item:hover .product-main-price {
+        opacity: 0;
+    }
+    .product-item:hover .btn-buy {
+        top: calc(100% - 48px);
+    }
 }
