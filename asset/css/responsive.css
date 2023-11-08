@@ -77,7 +77,7 @@
     .btn-buy {
         font-size: 12px;
         width: 60%;
-        padding: 4px 8px;
+        padding: 6px 8px;
     }
     .apologize-mess {
         padding: 12px 0 24px;
@@ -88,18 +88,14 @@
     iframe {
         width: 100% !important;
     }
-    .not-updated-yet__main {
+    .order__main {
         padding-top: 40px;
     }
-    .not-updated-yet {
+    .order-container {
         margin: unset;
         border-radius: unset;
         height: 100vh;
     }
-    /* .search-mobile {
-        display: inline-flex;
-        margin-right: 24px;
-    } */
 }
 /* từ moblie trở lên */
 @media (min-width: 46.25em) {
@@ -107,7 +103,6 @@
 }
 /* --------------- từ tablet tới pc ------------------- */
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-    
     .main {
         margin-top: 120px;
     }
@@ -174,9 +169,6 @@
     .slideshow {
         height: 83vh;
     }
-    /* .nav-list .search {
-        display: flex;
-    } */
 }
 /* từ tablet trở xuống */
 @media (max-width: 63.9375em) {
@@ -207,10 +199,9 @@
     }
     .btn-buy {
         position: relative;
-        float:inline-start;
+        float: left;
         margin-bottom: 16px;
     }
-    
 }
 /* ----------------- từ pc trở lên ----------------------- */
 @media (min-width: 64em) {

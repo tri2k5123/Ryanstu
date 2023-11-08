@@ -20,7 +20,7 @@ navs.forEach((nav, index) => {
     nav.onclick = function () {
         navActive.classList.remove("active");
         $(".js-content.active").classList.remove("active");
-
+        
         this.classList.add("active");
         content.classList.add("active");
     };
@@ -31,7 +31,7 @@ navHomes.forEach((navHome, index) => {
     navHome.onclick = function () {
         navHomeActive.classList.remove("active");
         $(".js-content.active").classList.remove("active");
-
+        
         this.classList.add("active");
         content.classList.add("active");
     }
@@ -41,14 +41,13 @@ navMobiles.forEach((navMobile, index) => {
     navMobile.onclick = function () {
         navMobileActive.classList.remove("active");
         $(".js-content.active").classList.remove("active");
-
+        
         this.classList.add("active");
         content.classList.add("active");
         // hide category
         overlay.classList.remove("open");
     }
 })
-// hide pagination and show more product
 
 // show nav category
 const navCate = $(".js-nav-cate");
@@ -60,26 +59,7 @@ btnCate.addEventListener("click", () => overlay.classList.toggle("open"));
 
 overlay.addEventListener("click", () => overlay.classList.remove("open"));
 navCate.addEventListener("click", (event) => event.stopPropagation());
-// Show order
-const btnUpdates = $$(".js-notify-update");
-const notifyUpdate = $(".js-update");
 
-for(const btnUpdate of btnUpdates) {
-    btnUpdate.addEventListener("click", () => notifyUpdate.classList.add('open'));
-}
-// Hide order
-const closeNotify = $(".js-close-notify");
-const mainNotify = $(".not-updated-yet");
-
-closeNotify.addEventListener("click", () => notifyUpdate.classList.remove('open'));
-notifyUpdate.addEventListener("click", () => notifyUpdate.classList.remove('open'));
-mainNotify.addEventListener("click", (event) => event.stopPropagation());
-
-// Default right click
-document.addEventListener("contextmenu", function(event) {
-    event.preventDefault();
-}, false);
-// ----------------------
 // preloader main
 var preLoader = $('#preloader')
 var root = $('#root')
@@ -87,11 +67,20 @@ setTimeout(function() {
     preLoader.style.display = 'none'
     root.style.display = 'block';
 }, 1000)
-// show search
-// const search = $('.js-search')
-// const iconSearch = $('.js-search-icon')
-// const deleteSearch = $('.js-search-delete')
-// const typeSearch = $('.js-search-type')
+// show order
+const mainOrder = $('.js-order')
+const btnBuys = $$('.js-btn-buy')
+const closeOrder = $('.js-close-order')
+const orderContainer  = $('.order-container')
 
-// iconSearch.addEventListener("click", () => search.classList.toggle('active'))
-// deleteSearch.addEventListener('click', () => typeSearch.value = '')
+for(const btnBuy of btnBuys) {
+    btnBuy.addEventListener('click', () => mainOrder.classList.add('open'))
+} 
+closeOrder.addEventListener('click', () => mainOrder.classList.remove('open'))
+mainOrder.addEventListener('click', () => mainOrder.classList.remove('open'))
+orderContainer.addEventListener('click', (e) => e.stopPropagation())
+
+// Default right click
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+}, false);

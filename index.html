@@ -17,10 +17,13 @@
                 display: block;
                 transition: all linear 2s;
             }
-            .js-update.open {
+            .js-order.open {
                 display: block;
             }
             .js-overlay.open {
+                display: block;
+            }
+            .detail.open {
                 display: block;
             }
         </style>
@@ -34,15 +37,9 @@
                     <a class="js-nav-home js-nav-mobile js-nav active" href="#"><img class="header__img" class src="./asset/img/logo.webp" alt="Ryanstu"></a>
                     <div class="nav-block">
                         <i class="js-btn-cate nav-bar-icon fa-solid fa-bars"></i>
-                        <!-- <div class="search-mobile js-search">
-                            <i class="search-icon js-search-icon fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Search" class="search-type js-search-type">
-                            <div class="search-delete js-search-delete fa-solid fa-xmark"></div>
-                        </div> -->
                         <div class="overlay-mobile js-overlay">
                             <div class="nav-mobile js-nav-cate">
                                 <div class="nav-item">Menu</div>
-                                <!-- <a href="/collections/collection/collection.html" class="nav-item circle">SS23 collection</a> -->
                                 <a href="#" class="nav-item js-nav-mobile">SHOP ALL</a>
                                 <a href="#" class="nav-item js-nav-mobile">TOPS</a>
                                 <a href="#" class="nav-item js-nav-mobile">BOTTOMS</a>
@@ -51,11 +48,9 @@
                                 <a href="#" class="nav-item js-nav-mobile">HAT</a>
                                 <a href="#" class="nav-item js-nav-mobile">BAGS</a>
                                 <a href="#" class="nav-item js-nav-mobile">SALE</a>
-                                <!-- <a href="/collections/recruitment/recruitment.html" class="nav-item circle">RECRUITMENT</a> -->
                             </div>
                         </div>
                         <div class="nav-list">
-                            <!-- <a href="/collections/collection/collection.html" class="nav-item circle">SS23 collection</a> -->
                             <a href="#" class="nav-item js-nav circle">SHOP ALL</a>
                             <a href="#" class="nav-item js-nav circle">TOPS</a>
                             <a href="#" class="nav-item js-nav circle">BOTTOMS</a>
@@ -64,7 +59,6 @@
                             <a href="#" class="nav-item js-nav circle">HAT</a>
                             <a href="#" class="nav-item js-nav circle">BAGS</a>
                             <a href="#" class="nav-item js-nav circle">SALE</a>
-                            <!-- <a href="/collections/recruitment/recruitment.html" class="nav-item circle">RECRUITMENT</a> -->
                         </div>
                         <!-- <div class="nav-list">
                             <div class="nav-item">
@@ -95,22 +89,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="product js-content">
-                    <!-- <div class="search-option">Mới nhất <i class="search-option__icon fa-solid fa-chevron-down"></i></div> -->
-                    <div class="row js-product-all"></div>
-                </div>
-                <div class="product js-content">
-                    <!-- <div class="search-option">Mới nhất <i class="search-option__icon fa-solid fa-chevron-down"></i></div> -->
-                    <div class="row js-product-top"></div>
-                </div>
-                <div class="product js-content">
-                    <!-- <div class="search-option"> Mới nhất <i class="search-option__icon fa-solid fa-chevron-down"></i></div> -->
-                    <div class="row js-product-bottom"></div>
-                </div>
-                <div class="product js-content">
-                    <!-- <div class="search-option"> Mới nhất <i class="search-option__icon fa-solid fa-chevron-down"></i></div> -->
-                    <div class="row js-product-outerwear"></div>
-                </div>
+                <div class="product js-content"><div class="row js-product-all"></div></div>
+                <div class="product js-content"><div class="row js-product-top"></div></div>
+                <div class="product js-content"><div class="row js-product-bottom"></div></div>
+                <div class="product js-content"><div class="row js-product-outerwear"></div></div>
                 <div class="product js-content">
                     <p class="apologize-mess">Sorry, this product is currently not available in the shop!</p>
                     <div class="other-products">
@@ -132,81 +114,17 @@
                         <div class="row js-product-all"></div>
                     </div>
                 </div>
-                <div class="product js-content">
-                    <!-- <div class="search-option">
-                        Mới nhất <i class="search-option__icon fa-solid fa-chevron-down"></i>
-                    </div> -->
-                    <div class="row js-product-sale"></div>
-                </div>
-                <div id="toast"></div>
-                <!-- <marquee behavior="scroll" direction="" class="slogan">STREETWEAR BRAND LIMITED</marquee>
-                <div class="footer">
-                    <div class="row">
-                        <div class="col l-3 m-12 c-12">
-                            <div class="footer-block">
-                                <div class="footer-title">HỆ THỐNG CỬA HÀNG HADES</div>
-                                <div class="footer-content">
-                                    <p>HADES STUDIO FLAGSHIP STORE: 69 QUANG TRUNG STREET, GO VAP DISTRICT, HOCHIMINH.</p>
-                                    <p>Store 2: 26 LY TU TRONG STREET, DISTRICT 1, HOCHIMINH (THE NEW PLAYGROUND).</p>
-                                    <p>Store 3: 350 DIEN BIEN PHU STREET, WARD 7, BINH THANH DISTRICT, HOCHIMINH (G-TOWN).</p>
-                                    <p>Store 4: 140 NGUYEN HY QUANG, DONG DA DISTRICT, HANOI.</p>
-                                    <p>Store 5: 4 PHAM NGU LAO STREET, DISTRICT 1, HOCHIMINH.</p>
-                                    <p>Store 6: 136 NGUYEN HONG DAO STREET, TAN BINH DISTRICT, HOCHIMINH.</p>
-                                    <p>Store 7: 56 MAU THAN, NINH KIEU DISTRICT, CANTHO.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l-3 m-6 c-12">
-                            <div class="footer-block">
-                                <div class="footer-title">THÔNG TIN LIÊN HỆ</div>
-                                <div class="footer-content">
-                                    <p>- CÔNG TY TNHH HADES Địa chỉ: 147 Bùi Đình Tuý, Phường 24, Bình Thạnh, Thành phố Hồ Chí Minh</p>
-                                    <p>- SỐ CSKH: 02873011021 (10h -18h)</p>
-                                    <p>- Ngày cấp: 20/07/2020</p>
-                                    <p>- Tuyển dụng: hr@hades.vn</p>
-                                    <p>- Website: hades.vn</p>
-                                    <p>- For business: contact@hades.vn</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l-3 m-6 c-12">
-                            <div class="footer-block">
-                                <div class="footer-title">CHÍNH SÁCH</div>
-                                <div class="footer-content">
-                                    <p><a href="#">- Chính sách sử dụng website</a></p>
-                                    <p><a href="#">- Phương thức thanh toán</a></p>
-                                    <p><a href="#">- Chính sách đổi trả</a></p>
-                                    <p><a href="#">- Chính sách giao nhận - vận chuyển</a></p>
-                                    <p><a href="#">- Điều khoản dịch vụ</a></p>
-                                    <p><a href="#">- Hướng dẫn mua hàng</a></p>
-                                    <p><a href="#">- Chính sách bảo mật</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col l-3 m-6 c-12">
-                            <div class="footer-block">
-                                <div class="footer-title">FOLLOW US ON SOCIAL MEDIA</div>
-                                <div class="footer-content">
-                                    <div class="footer-content__social">
-                                        <a href="#" class="social__icon fa-brands fa-square-facebook"></a>
-                                        <a href="#" class="social__icon fa-brands fa-square-instagram"></a>
-                                    </div>
-                                    <a href="#"><img src="./asset/img/bct.webp" class="footer-content__bct" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="overlay js-update">
-                    <div class="not-updated-yet">
-                        <i class="js-close-notify not-updated-yet__icon fa-solid fa-xmark"></i>
-                        <div class="not-updated-yet__main">
+                <div class="product js-content"><div class="row js-product-sale"></div></div>
+
+                <div class="overlay-order js-order">
+                    <div class="order-container">
+                        <i class="js-close-order order__icon fa-solid fa-xmark"></i>
+                        <div class="order__main">
                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrVPXZBJ7JSFsk2_hQ6I4xyQxo4ACz4aPcpBJxIL46BWAuig/viewform?embedded=true" width="640" height="1216" frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
-                            <!-- <img class="not-updated-yet__img" src="./asset/img/img-repair.png" alt="">
-                            <div class="not-updated-yet__mess">Features have not been upgraded yet.</div> -->
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <script src="./asset/css/index.js"></script>

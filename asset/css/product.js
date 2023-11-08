@@ -1,6 +1,8 @@
 var products = [
     {
         name: "LITHE BOXY HOODIE",
+        color: ['yellow'],
+        size: ['S', 'L'],
         price: "650.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -9,6 +11,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: ['red'],
+        size: ['S', 'M'],
         price: "350.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -17,6 +21,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: ['blue'],
+        size: ['M', 'L'],
         price: "450.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -25,6 +31,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: ['violet'],
+        size: ['S', 'M', 'L'],
         price: "850.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -33,6 +41,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: ['green'],
+        size: ['S', 'L'],
         price: "950.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -41,6 +51,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: [ 'purple'],
+        size: ['S', 'M', 'L'],
         price: "150.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -49,6 +61,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: ['brown'],
+        size: ['M', 'L'],
         price: "250.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -59,6 +73,8 @@ var products = [
     },
     {
         name: "LITHE BOXY HOODIE",
+        color: [ 'gray', 'black'],
+        size: ['S', 'M'],
         price: "750.000",
         img: "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
         imgHover: "./asset/img/allproduct/product-example/img-hover.gif",
@@ -100,18 +116,32 @@ var productFoot = $(".js-product-foot")
 var productHat = $(".js-product-hat") 
 var productBag = $(".js-product-bag") 
 var productSale = $(".js-product-sale")
+
+
 // show all product
 var showAllProduct = allProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -119,18 +149,30 @@ var showAllProduct = allProduct.map(function(product) {
 productAll.forEach(function(boxProducts) {
     boxProducts.innerHTML = showAllProduct.join('')
 })
-//---------------
+// show top product
 var showTopProduct = topProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -138,16 +180,28 @@ var showTopProduct = topProduct.map(function(product) {
 productTop.innerHTML = showTopProduct.join('')
 // show bottom product
 var showBottomProduct = bottomProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -155,16 +209,28 @@ var showBottomProduct = bottomProduct.map(function(product) {
 productBottom.innerHTML = showBottomProduct.join('')
 // show outerwear product
 var showOuterwearProduct = outerwearProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -172,16 +238,28 @@ var showOuterwearProduct = outerwearProduct.map(function(product) {
 productOuterwear.innerHTML = showOuterwearProduct.join('')
 // show foot product
 var showFootProduct = footProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -191,16 +269,28 @@ if(showFootProduct.join('') !== "") {
 }
 // show hat product
 var showHatProduct = hatProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -210,16 +300,28 @@ if(showHatProduct.join('') !== "") {
 }
 // show bag product
 var showBagProduct = bagProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
@@ -229,18 +331,30 @@ if(showBagProduct.join('') !== "") {
 }
 // show sale product
 var showSaleProduct = saleProduct.map(function(product) {
+    var productColor = product.color.map(function(color) {
+        return `
+            <div class="product-item-color" style="background-color: ${color}"></div>
+        `
+    })
+    var productSize = product.size.map(function(size) {
+        return `
+            <div class="product-item-size">${size}</div>
+        `
+    })
     return `
         <div class="col l-2-4 m-4 c-6">
-            <div onclick="showToastInfo()" class="product-item">
+            <div class="product-item">
                 <img class="product-img" src="${product.img}" alt="">
                 <img src="${product.imgHover}" alt="" class="product-img-hover">
                 <div class="product-name">${product.name}</div>
+                <div class="product-list-color">${productColor.join('')}</div>
+                <div class="product-list-size">${productSize.join('')}</div>
                 <div class="product-main-price">
                     <div class="product-percent-price">${product.percentPromotion}%</div>
                     <div class="product-prices">${product.price}đ</div>
                     <div class="product-cancel-price">${product.cancelPrice}đ</div>
                 </div>
-                <div class="js-notify-update btn-buy">BUY NOW!</div>
+                <div class="js-btn-buy btn-buy">BUY NOW!</div>
             </div>
         </div>
     `
