@@ -87,8 +87,8 @@ mainOrder.addEventListener('click', () => mainOrder.classList.remove('open'))
 orderContainer.addEventListener('click', (e) => e.stopPropagation())
 
 // Default right click
-// document.addEventListener("contextmenu", function(event) {
-//     event.preventDefault();
-// }, false);
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+}, false);
 
 
