@@ -20,6 +20,7 @@ navs.forEach((nav, index) => {
     nav.onclick = function () {
         navActive.classList.remove("active");
         $(".js-content.active").classList.remove("active");
+        mainDetail.classList.remove('open');
         
         this.classList.add("active");
         content.classList.add("active");
@@ -31,6 +32,7 @@ navHomes.forEach((navHome, index) => {
     navHome.onclick = function () {
         navHomeActive.classList.remove("active");
         $(".js-content.active").classList.remove("active");
+        mainDetail.classList.remove('open');
         
         this.classList.add("active");
         content.classList.add("active");
@@ -41,6 +43,7 @@ navMobiles.forEach((navMobile, index) => {
     navMobile.onclick = function () {
         navMobileActive.classList.remove("active");
         $(".js-content.active").classList.remove("active");
+        mainDetail.classList.remove('open');
         
         this.classList.add("active");
         content.classList.add("active");
@@ -74,7 +77,10 @@ const closeOrder = $('.js-close-order')
 const orderContainer  = $('.order-container')
 
 for(const btnBuy of btnBuys) {
-    btnBuy.addEventListener('click', () => mainOrder.classList.add('open'))
+    btnBuy.addEventListener('click', (e) => {
+        mainOrder.classList.add('open')
+        e.stopPropagation()
+    })
 } 
 closeOrder.addEventListener('click', () => mainOrder.classList.remove('open'))
 mainOrder.addEventListener('click', () => mainOrder.classList.remove('open'))
@@ -84,3 +90,5 @@ orderContainer.addEventListener('click', (e) => e.stopPropagation())
 document.addEventListener("contextmenu", function(event) {
     event.preventDefault();
 }, false);
+
+

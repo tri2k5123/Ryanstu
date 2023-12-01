@@ -77,7 +77,7 @@
     .btn-buy {
         font-size: 12px;
         width: 60%;
-        padding: 6px 8px;
+        padding: 4px 8px;
     }
     .apologize-mess {
         padding: 12px 0 24px;
@@ -95,6 +95,10 @@
         margin: unset;
         border-radius: unset;
         height: 100vh;
+    }
+    /* detail */
+    .product-detail-back {
+        margin: 0 0 0 24px;
     }
 }
 /* từ moblie trở lên */
@@ -169,6 +173,13 @@
     .slideshow {
         height: 83vh;
     }
+    /* detail */
+    .main-detail {
+        top: -8px;
+    }
+    .carousel-detail {
+        width: 90%;
+    }
 }
 /* từ tablet trở xuống */
 @media (max-width: 63.9375em) {
@@ -201,6 +212,10 @@
         position: relative;
         float: left;
         margin-bottom: 16px;
+    }
+    /* detail */
+    .product-detail-info {
+        padding-top: 24px;
     }
 }
 /* ----------------- từ pc trở lên ----------------------- */

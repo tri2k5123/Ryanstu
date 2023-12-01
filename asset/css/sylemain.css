@@ -180,6 +180,7 @@ html {
 /* product */
 .product {
     margin: var(--mg-top-pd) 50px 26px;
+    min-height: 100vh;
 }
 .product-item {
     margin-bottom: 24px;
@@ -224,27 +225,11 @@ html {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
 }
-.product-list-color {
-}
-.product-item-color {
-    margin-top: 12px;
-    display: inline-block;
-    padding: 8px;
-    border-radius: 50%;
-}
-.product-list-size {
-}
-.product-item-size {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 4px 6px;
-    border: 1px solid #333;
-}
 .product-main-price {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 20px;
     color: var(--color-price);
     font-size: 12px;
     padding-bottom: 20px;
@@ -268,10 +253,10 @@ html {
 .product-percent-price {
     color: #fff;
     background-color: #000;
-    padding: 4px 8px;
+    padding: 4px;
 }
 .product-prices {
-    margin: 0 8px 0;
+    margin: 0 6px 0;
     font-size: var(--size-default);
 }
 .product-cancel-price {
@@ -387,4 +372,158 @@ html {
 }
 .order__main {
     padding-top: 32px;
+}
+/*  */
+.main-detail {
+    position: absolute;
+    top: -36px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 13;
+    display: none;
+}
+.container-detail {
+    margin-top: 28px;
+}
+.product-detail-back {
+    position: absolute;
+    font-size: 28px;
+    padding: 16px;
+    margin-left: 50px;
+    z-index: 1;
+}
+.product-detail-back:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.main-detail.open {
+    display: block;
+    overflow-x: hidden;
+}
+.product-detail-imgs {
+    
+}
+.img-list {
+    text-align: center;
+}
+.img-item {
+    width: 90%;
+
+}
+.product-detail-info {
+    padding-top: 80px;
+}
+.product-detail-name {
+    font-size: 24px;
+}
+.product-detail-main-price {
+    margin: 24px 0;
+    display: flex;
+    align-items: baseline;
+    color: var(--color-price);
+    font-size: 12px;
+}
+.product-detail-percent {
+    color: #fff;
+    background-color: #BE1E2D;
+    padding: 6px;
+}
+.product-detail-price {
+    font-size: 20px;
+    margin: 0 12px;
+}
+.product-detail-cancel {
+    color: #939393;
+    padding-top: 8px;
+    font-size: 14px;
+    position: relative;
+}
+.product-detail-cancel::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: url(../../asset/img/sale.webp) top left / cover no-repeat;
+    background-size: 4em 2.5em;
+    width: 4.125em;
+    height: 3.25em;
+}
+.product-detail-color-item,
+.product-detail-size-item {
+    padding: 12px;
+    border: 1px solid #333;
+    display: inline-block;
+    cursor: pointer;
+}
+.product-detail-color-item + .product-detail-color-item,
+.product-detail-size-item + .product-detail-size-item {
+    margin-left: 8px;
+}
+.product-detail-color,
+.product-detail-size {
+    
+}
+.product-detail-size {
+    font-size: 13px;
+    margin: 24px 0;
+}
+/* detail */
+.carousel-detail {
+    overflow: hidden;
+    position: relative;
+    width: 70%;
+    margin: auto;
+    aspect-ratio: 4.5/6;
+}
+.slider-detail {
+    height: 100%;
+    display: flex;
+    transition: all 0.3s;
+}
+.slider-detail img {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.controls-detail .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    padding: 4px 12px;
+}
+.controls-detail .arrow.left {
+    left: 0;
+} 
+.controls-detail .arrow.right {
+    right: 0;
+}
+.list-img{
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    list-style: none;
+    transform: translateX(-50%);
+}
+.item-img {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.2);
+}
+.item-img + .item-img {
+    margin-left: 12px;
+}
+.item-img.selected {
+    background-color: transparent; 
 }
