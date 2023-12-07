@@ -235,6 +235,7 @@ html {
     padding-bottom: 20px;
 }
 .btn-buy {
+    text-decoration: none;
     width: 70%;
     font-size: 14px;
     color: #fff;
@@ -484,6 +485,9 @@ html {
     display: flex;
     transition: all 0.3s;
 }
+.slider-detail::-webkit-scrollbar {
+    display: none;
+  }
 .slider-detail img {
     flex-basis: 100%;
     display: flex;
@@ -526,4 +530,15 @@ html {
 }
 .item-img.selected {
     background-color: transparent; 
+}
+.btn-buy-detail {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 15px;
+    width: 70%;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
 }

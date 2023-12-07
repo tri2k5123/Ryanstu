@@ -72,13 +72,14 @@ setTimeout(function() {
 }, 1000)
 // show order
 const mainOrder = $('.js-order')
-const btnBuys = $$('.js-btn-buy')
 const closeOrder = $('.js-close-order')
 const orderContainer  = $('.order-container')
 
+const btnBuys = $$('.js-btn-buy') // thêm class này vào button muốn show order
+
 for(const btnBuy of btnBuys) {
     btnBuy.addEventListener('click', (e) => {
-        mainOrder.classList.add('open')
+        // mainOrder.classList.add('open')
         e.stopPropagation()
     })
 } 

@@ -1,135 +1,3 @@
-var products = [
-    {
-        id: '8',
-        name: "LITHE BOXY HOODIE",
-        color: ['yellow'],
-        size: ['S', 'M', 'L'],
-        price: "650.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png",
-            "./asset/img/allproduct/product-desc/img-desc.png",
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'top',
-    },
-    {
-        id: '7',
-        name: "LITHE BOXY HOODIE",
-        color: ['red'],
-        size: ['S', 'M', 'L'],
-        price: "350.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'top',
-    },
-    {
-        id: '6',
-        name: "LITHE BOXY HOODIE",
-        color: ['blue'],
-        size: ['S', 'M', 'L'],
-        price: "450.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'bottom',
-    },
-    {
-        id: '5',
-        name: "LITHE BOXY HOODIE",
-        color: ['violet'],
-        size: ['S', 'M', 'L'],
-        price: "850.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'bottom',
-    },
-    {
-        id: '4',
-        name: "LITHE BOXY HOODIE",
-        color: ['green'],
-        size: ['S', 'M', 'L'],
-        price: "950.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'outerwear',
-    },
-    {
-        id: '3',
-        name: "LITHE BOXY HOODIE",
-        color: [ 'white'],
-        size: ['S', 'M', 'L'],
-        price: "150.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'outerwear',
-    },
-    {
-        id: '2',
-        name: "LITHE BOXY HOODIE",
-        color: ['brown'],
-        size: ['S', 'M', 'L'],
-        price: "250.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-        commonProperty: 'all',
-        property: 'sale',
-        propertyPromotion: ['40', '1.000.000'],
-    },
-    {
-        id: '1',
-        name: "LITHE BOXY HOODIE",
-        color: [ 'gray', 'purple'],
-        size: ['S', 'M', 'L'],
-        price: "750.000",
-        imgs: [
-            "./asset/img/allproduct/product/LITHEBOXYHOODIE.webp",
-            "./asset/img/allproduct/product-example/img-hover.gif",
-            "./asset/img/allproduct/product-desc/img-desc.png"
-        ],
-        description: [
-            "Hoạ tiết monogram Hades áp dụng kỹ thuật in lụa",
-            "Có dây rút ở thân áo kèm nút chặn kim loại",
-            "Chi tiết chữ in kéo lụa ở mặt sau áo",
-            "Có 2 túi khoá kéo ẩn phía trước",
-            "Chất liệu: Vải dù",
-            "Sử dụng kỹ thuật ráp nối vải"
-        ],
-        commonProperty: 'all',
-        property: 'sale',
-        propertyPromotion: ['40', '1.000.000'],
-    },
-]
 var allProduct = products.filter(function(product) {
     return product.commonProperty === 'all'
 })
@@ -173,7 +41,7 @@ var showAllProduct = allProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -192,7 +60,7 @@ var showTopProduct = topProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -209,7 +77,7 @@ var showBottomProduct = bottomProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -226,7 +94,7 @@ var showOuterwearProduct = outerwearProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -243,7 +111,7 @@ var showFootProduct = footProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -262,7 +130,7 @@ var showHatProduct = hatProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -281,7 +149,7 @@ var showBagProduct = bagProduct.map(function(product) {
                 <div class="product-main-price">
                     <div class="product-prices">${product.price}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -302,7 +170,7 @@ var showSaleProduct = saleProduct.map(function(product) {
                     <div class="product-prices">${product.price}đ</div>
                     <div class="product-cancel-price">${product.propertyPromotion[1]}đ</div>
                 </div>
-                <div class="js-btn-buy btn-buy">BUY NOW!</div>
+                <a href="https://www.instagram.com/ryanflorida.clo/" class="js-btn-buy btn-buy">BUY NOW!</a>
             </div>
         </div>
     `
@@ -320,6 +188,7 @@ function showDetailProduct(...info) {
     const size = sizes.split(',')
     const allImg = imgs.split(',')
     const promotionValue = promotionValues.split(',')
+
     const htmlImg = allImg.map((imgChild) => {
         return `
         <img src="${imgChild}" alt="">
@@ -348,12 +217,12 @@ function showDetailProduct(...info) {
                 <i onclick="detailBack()" class="product-detail-back fa-solid fa-arrow-left"></i>
                 <div class="col l-6 l-o-1 m-8 m-o-2 c-12 product-detail-imgs">
                     <div class="carousel-detail">
-                    <div class="slider-detail">${htmlImg.join('')}</div>
-                    <div class="controls-detail">
-                        <span class="arrow left"><i class="fa-solid fa-angle-left"></i></span>
-                        <span class="arrow right"><i class="fa-solid fa-angle-right"></i></span>
-                    </div>
-                    <ul class='list-img'>${htmlKnot.join('')}</ul>
+                        <div class="slider-detail">${htmlImg.join('')}</div>
+                        <div class="controls-detail">
+                            <span class="arrow left"><i class="fa-solid fa-angle-left"></i></span>
+                            <span class="arrow right"><i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                        <ul class='list-img'>${htmlKnot.join('')}</ul>
                     </div>
                 </div>
                 <div class="col l-4 l-o-1 m-10 m-o-1 c-10 c-o-1 product-detail-info">
@@ -365,6 +234,7 @@ function showDetailProduct(...info) {
                     </div>
                     <div class="product-detail-color">${htmlColor.join('')}</div>
                     <div class="product-detail-size">${htmlSize.join('')}</div>
+                    <a href="https://www.instagram.com/ryanflorida.clo/" class="btn-buy-detail">BUY NOW!</a>
                 </div>
             `
         } else {
@@ -372,12 +242,12 @@ function showDetailProduct(...info) {
                 <i onclick="detailBack()" class="product-detail-back fa-solid fa-arrow-left"></i>
                 <div class="col l-6 l-o-1 m-8 m-o-2 c-12 product-detail-imgs">
                     <div class="carousel-detail">
-                    <div class="slider-detail">${htmlImg.join('')}</div>
-                    <div class="controls-detail">
-                        <span class="arrow left"><i class="fa-solid fa-angle-left"></i></span>
-                        <span class="arrow right"><i class="fa-solid fa-angle-right"></i></span>
-                    </div>
-                    <ul class='list-img'>${htmlKnot.join('')}</ul>
+                        <div class="slider-detail">${htmlImg.join('')}</div>
+                        <div class="controls-detail">
+                            <span class="arrow left"><i class="fa-solid fa-angle-left"></i></span>
+                            <span class="arrow right"><i class="fa-solid fa-angle-right"></i></span>
+                        </div>
+                        <ul class='list-img'>${htmlKnot.join('')}</ul>
                     </div>
                 </div>
                 <div class="col l-4 l-o-1 m-10 m-o-1 c-10 c-o-1 product-detail-info">
@@ -387,6 +257,7 @@ function showDetailProduct(...info) {
                     </div>
                     <div class="product-detail-color">${htmlColor.join('')}</div>
                     <div class="product-detail-size">${htmlSize.join('')}</div>
+                    <a href="https://www.instagram.com/ryanflorida.clo/" class="btn-buy-detail">BUY NOW!</a>
                 </div>
             `
         }
